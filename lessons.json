@@ -1,0 +1,22 @@
+[
+  {
+    "topic":"AI",
+    "title":"What is AI?",
+    "message":"AI allows computers to perform tasks that normally require human intelligence."
+  },
+  {
+    "topic":"Web Development",
+    "title":"HTML",
+    "message":"HTML creates the structure of a webpage."
+  },
+  {
+    "topic":"Cars",
+    "title":"ABS",
+    "message":"ABS prevents wheels from locking during hard braking."
+  },
+  {
+    "topic":"Technology",
+    "title":"SSD",
+    "message":"SSDs are faster and more reliable than traditional hard drives."
+  }
+]
