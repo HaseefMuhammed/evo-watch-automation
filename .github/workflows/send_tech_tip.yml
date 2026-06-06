@@ -2,7 +2,7 @@ name: Send 30-Min Tech Tip
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # Runs automatically every 30 minutes
+    - cron: '*/30 * * * *'  # Runs automatically every 30 minutes
   workflow_dispatch:        # Allows you to click a button and test manually!
 
 jobs:
