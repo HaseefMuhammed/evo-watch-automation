@@ -11,7 +11,10 @@ with open('lessons.json', 'r') as f:
 history_file = 'history.json'
 if os.path.exists(history_file):
     with open(history_file, 'r') as f:
-        shown_titles = json.load(f)
+        try:
+            shown_titles = json.load(f)
+        except json.JSONDecodeError:
+            shown_titles = []
 else:
     shown_titles = []
 
@@ -32,8 +35,8 @@ with open(history_file, 'w') as f:
     json.dump(shown_titles, f)
 
 # 7. Package and fire the Telegram alert
-bot_token = os.environ['8791025250:AAHwgQDlUBNOU2hirqBqenFhWAyVohJNTZE']
-chat_id = os.environ['@evowatchpluswc']
+bot_token = os.environ['TELEGRAM_BOT_TOKEN']
+chat_id = os.environ['TELEGRAM_CHAT_ID']
 
 message_text = f"💡 *Topic: {chosen['topic']}*\n\n🔥 *{chosen['title']}*\n{chosen['message']}"
 telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
