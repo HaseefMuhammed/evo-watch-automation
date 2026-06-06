@@ -1,0 +1,35 @@
+name: Send 30-Min Tech Tip
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Automatically runs every 30 minutes
+  workflow_dispatch:        # Allows you to click a button and test manually!
+
+jobs:
+  send-tip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Python Automation
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python send_tip.py
+
+      - name: Commit and Save History
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add history.json
+          git diff-index --quiet HEAD || git commit -m "chore: update read history [skip ci]"
+          git push
