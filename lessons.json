@@ -1,22 +1,497 @@
 [
   {
-    "topic":"AI",
-    "title":"What is AI?",
-    "message":"AI allows computers to perform tasks that normally require human intelligence."
+    "topic": "AI",
+    "title": "What is Generative AI?",
+    "message": "Generative AI creates new content like text, images, and code by learning patterns from massive datasets."
   },
   {
-    "topic":"Web Development",
-    "title":"HTML",
-    "message":"HTML creates the structure of a webpage."
+    "topic": "AI",
+    "title": "Large Language Models",
+    "message": "LLMs like GPT and Claude are trained on billions of text samples to understand and generate human-like language."
   },
   {
-    "topic":"Cars",
-    "title":"ABS",
-    "message":"ABS prevents wheels from locking during hard braking."
+    "topic": "AI",
+    "title": "AI Agents",
+    "message": "AI agents can autonomously browse the web, write code, and complete multi-step tasks without constant human input."
   },
   {
-    "topic":"Technology",
-    "title":"SSD",
-    "message":"SSDs are faster and more reliable than traditional hard drives."
+    "topic": "AI",
+    "title": "India's AI Push",
+    "message": "India invested $1.1 billion in a state-backed AI venture fund and hosted major AI leaders at the India AI Impact Summit 2026."
+  },
+  {
+    "topic": "AI",
+    "title": "Sarvam AI",
+    "message": "Indian AI startup Sarvam released open-source models supporting Indian languages, making AI accessible to regional users."
+  },
+  {
+    "topic": "AI",
+    "title": "AI Hallucinations",
+    "message": "AI hallucinations occur when a model confidently outputs incorrect or made-up information, a key challenge in deployment."
+  },
+  {
+    "topic": "AI",
+    "title": "Prompt Engineering",
+    "message": "Prompt engineering is the art of crafting inputs to AI models to get accurate, relevant, and useful outputs."
+  },
+  {
+    "topic": "AI",
+    "title": "Neural Networks",
+    "message": "Neural networks are computing systems inspired by the human brain, forming the backbone of most modern AI."
+  },
+  {
+    "topic": "Smartphones",
+    "title": "Foldable Phones",
+    "message": "Foldable smartphones use flexible OLED displays to offer tablet-sized screens that fold into pocket-sized devices."
+  },
+  {
+    "topic": "Smartphones",
+    "title": "Satellite Connectivity",
+    "message": "Modern smartphones can now connect directly to satellites, enabling calls and SOS messages in areas with no cell towers."
+  },
+  {
+    "topic": "Smartphones",
+    "title": "Under-Display Camera",
+    "message": "Under-display cameras hide the front camera beneath the screen, delivering a completely notch-free display experience."
+  },
+  {
+    "topic": "Smartphones",
+    "title": "India's Smartphone Boom",
+    "message": "India is set to have over a billion smartphone users, making it the world's second-largest smartphone manufacturer."
+  },
+  {
+    "topic": "Smartphones",
+    "title": "AI in Your Phone",
+    "message": "On-device AI now powers real-time translation, photo enhancement, and personalized suggestions directly on smartphones."
+  },
+  {
+    "topic": "Gadgets",
+    "title": "Smart Glasses",
+    "message": "Smart glasses overlay digital information on the real world, with models like Meta Ray-Ban integrating AI assistants."
+  },
+  {
+    "topic": "Gadgets",
+    "title": "Wireless Earbuds ANC",
+    "message": "Active Noise Cancellation in earbuds uses microphones and inverse sound waves to block out ambient noise."
+  },
+  {
+    "topic": "Gadgets",
+    "title": "Smartwatches & Health",
+    "message": "Modern smartwatches monitor blood oxygen, ECG, skin temperature, and even detect irregular heart rhythms."
+  },
+  {
+    "topic": "Gadgets",
+    "title": "Portable Projectors",
+    "message": "Mini projectors now fit in your pocket and can project a 100-inch screen anywhere using laser or LED light sources."
+  },
+  {
+    "topic": "Gadgets",
+    "title": "E-Ink Tablets",
+    "message": "E-ink tablets like reMarkable mimic paper, reduce eye strain, and offer weeks of battery life for note-taking."
+  },
+  {
+    "topic": "Technology Facts",
+    "title": "Moore's Law",
+    "message": "Moore's Law predicted chip transistor counts double every 2 years, though physical limits are now slowing this pace."
+  },
+  {
+    "topic": "Technology Facts",
+    "title": "Internet Speed Records",
+    "message": "Researchers have achieved internet speeds exceeding 100 Tbps, enough to download 10 million HD movies per second."
+  },
+  {
+    "topic": "Technology Facts",
+    "title": "Data Created Daily",
+    "message": "Over 2.5 quintillion bytes of data are created every day — from social media posts to IoT sensor readings."
+  },
+  {
+    "topic": "Technology Facts",
+    "title": "Quantum Superposition",
+    "message": "Quantum computers use qubits that exist in multiple states simultaneously, enabling calculations impossible for classical computers."
+  },
+  {
+    "topic": "Technology Facts",
+    "title": "First Computer Bug",
+    "message": "The term 'bug' in computing comes from a real moth found trapped in a Harvard relay computer in 1947."
+  },
+  {
+    "topic": "Web Development",
+    "title": "WebAssembly",
+    "message": "WebAssembly (WASM) lets code written in C++, Rust, or Go run at near-native speed inside a web browser."
+  },
+  {
+    "topic": "Web Development",
+    "title": "Progressive Web Apps",
+    "message": "PWAs are websites that behave like native apps — they work offline, send notifications, and can be installed on devices."
+  },
+  {
+    "topic": "Web Development",
+    "title": "Edge Computing & CDN",
+    "message": "Edge computing moves data processing closer to users via CDN nodes, reducing latency and speeding up web apps."
+  },
+  {
+    "topic": "Web Development",
+    "title": "REST vs GraphQL",
+    "message": "GraphQL lets clients request only the exact data they need, unlike REST APIs which return fixed data structures."
+  },
+  {
+    "topic": "Cybersecurity",
+    "title": "Zero-Trust Security",
+    "message": "Zero-trust security assumes no user or device is trusted by default, requiring verification for every access request."
+  },
+  {
+    "topic": "Cybersecurity",
+    "title": "Phishing Attacks",
+    "message": "Phishing tricks users into revealing credentials via fake emails or websites — the most common cyberattack vector."
+  },
+  {
+    "topic": "Cybersecurity",
+    "title": "Two-Factor Authentication",
+    "message": "2FA adds a second verification step (OTP, biometric) beyond passwords, drastically reducing unauthorized account access."
+  },
+  {
+    "topic": "Electric Vehicles",
+    "title": "EV Range Anxiety",
+    "message": "Range anxiety — fear of running out of charge — is fading as EVs now offer 500+ km per charge and fast chargers expand."
+  },
+  {
+    "topic": "Electric Vehicles",
+    "title": "Solid-State Batteries",
+    "message": "Solid-state batteries replace liquid electrolytes with solid material, promising safer, faster-charging, longer-range EVs."
+  },
+  {
+    "topic": "Electric Vehicles",
+    "title": "India's EV Policy",
+    "message": "India's FAME scheme and reduced GST on EVs are accelerating adoption of electric two-wheelers and cars in Indian cities."
+  },
+  {
+    "topic": "Electric Vehicles",
+    "title": "Vehicle-to-Grid (V2G)",
+    "message": "V2G technology lets EV batteries feed electricity back to the power grid, turning cars into mobile energy storage units."
+  },
+  {
+    "topic": "Cars",
+    "title": "ADAS Technology",
+    "message": "Advanced Driver Assistance Systems include lane-keeping, automatic braking, and adaptive cruise control for safer driving."
+  },
+  {
+    "topic": "Cars",
+    "title": "Turbocharging Explained",
+    "message": "A turbocharger uses exhaust gases to spin a turbine that forces more air into the engine, boosting power without adding engine size."
+  },
+  {
+    "topic": "Cars",
+    "title": "Hydrogen Fuel Cell Cars",
+    "message": "Hydrogen cars combine hydrogen with oxygen in a fuel cell to produce electricity, emitting only water vapor as exhaust."
+  },
+  {
+    "topic": "Cars",
+    "title": "India's SUV Craze",
+    "message": "SUVs now account for over 50% of passenger car sales in India, driven by road conditions, status, and higher ground clearance."
+  },
+  {
+    "topic": "Bikes",
+    "title": "Electric Motorcycles",
+    "message": "Electric motorcycles offer instant torque and near-zero running costs, with models like Ola S1 Pro leading in India."
+  },
+  {
+    "topic": "Bikes",
+    "title": "Cornering ABS",
+    "message": "Cornering ABS prevents wheel lock-up during braking on curves using lean-angle sensors for dramatically safer riding."
+  },
+  {
+    "topic": "Bikes",
+    "title": "Quickshifter Technology",
+    "message": "A quickshifter lets riders change gears without using the clutch at full throttle, enabling faster, smoother acceleration."
+  },
+  {
+    "topic": "Indian Problems",
+    "title": "Road Pothole Crisis",
+    "message": "India loses billions annually to pothole-related accidents and vehicle damage — AI-based road monitoring startups are emerging to fix this."
+  },
+  {
+    "topic": "Indian Problems",
+    "title": "Air Pollution in Cities",
+    "message": "Delhi, Mumbai, and Bengaluru face hazardous AQI levels. IoT-based air monitors and EV adoption are key to tackling this."
+  },
+  {
+    "topic": "Indian Problems",
+    "title": "Digital Divide",
+    "message": "Despite 800M+ internet users, rural India still faces poor connectivity, limiting access to education and e-commerce."
+  },
+  {
+    "topic": "Indian Problems",
+    "title": "Healthcare Access",
+    "message": "Over 60% of Indians lack access to quality healthcare. Telemedicine and AI diagnostics startups are bridging this gap."
+  },
+  {
+    "topic": "Indian Problems",
+    "title": "Water Scarcity",
+    "message": "21 Indian cities including Bengaluru face groundwater depletion. Smart irrigation and AI-based water management are critical solutions."
+  },
+  {
+    "topic": "Indian Problems",
+    "title": "Skill Gap in IT",
+    "message": "India faces a growing mismatch between college graduates and industry-ready tech skills, fueling demand for edtech platforms."
+  },
+  {
+    "topic": "Startup Ideas",
+    "title": "Vernacular AI Chatbot",
+    "message": "Build an AI chatbot in Hindi, Tamil, Telugu, or Malayalam to help rural Indians access government schemes and banking services."
+  },
+  {
+    "topic": "Startup Ideas",
+    "title": "EV Charging Network",
+    "message": "A hyperlocal EV charging station network for Tier 2 and 3 Indian cities could solve the infrastructure gap for EV adoption."
+  },
+  {
+    "topic": "Startup Ideas",
+    "title": "AgriTech Price Predictor",
+    "message": "An AI tool that predicts crop market prices using weather, demand, and transport data to help farmers sell at the right time."
+  },
+  {
+    "topic": "Startup Ideas",
+    "title": "B2B SaaS for Kirana Stores",
+    "message": "A simple inventory, billing, and credit management app for India's 12 million kirana stores is a massive untapped market."
+  },
+  {
+    "topic": "Startup Ideas",
+    "title": "Telemedicine for Tier 3",
+    "message": "An AI-first telemedicine platform in regional languages connecting rural patients with specialist doctors via video and voice."
+  },
+  {
+    "topic": "Startup Ideas",
+    "title": "Waste-to-Energy Platform",
+    "message": "A marketplace connecting municipal waste collectors with biogas and compost startups to monetize solid waste in Indian cities."
+  },
+  {
+    "topic": "Project Ideas",
+    "title": "Personal Finance Tracker",
+    "message": "Build a UPI-linked expense tracker that auto-categorizes spending, sets budgets, and sends weekly financial health reports."
+  },
+  {
+    "topic": "Project Ideas",
+    "title": "AI Resume Analyzer",
+    "message": "Create a tool that scans resumes against job descriptions using NLP and gives actionable feedback to improve shortlisting chances."
+  },
+  {
+    "topic": "Project Ideas",
+    "title": "Smart Home Dashboard",
+    "message": "Build an IoT dashboard using Raspberry Pi to control lights, fans, and appliances via voice or a mobile app."
+  },
+  {
+    "topic": "Project Ideas",
+    "title": "Fake News Detector",
+    "message": "Develop a browser extension that uses AI to cross-check news headlines against verified sources in real time."
+  },
+  {
+    "topic": "Project Ideas",
+    "title": "Pothole Detection App",
+    "message": "Use smartphone accelerometer data and GPS to automatically detect and map potholes, then report them to civic authorities."
+  },
+  {
+    "topic": "Cloud Computing",
+    "title": "What is Serverless?",
+    "message": "Serverless computing lets developers run code without managing servers — you pay only for the exact compute time used."
+  },
+  {
+    "topic": "Cloud Computing",
+    "title": "Multi-Cloud Strategy",
+    "message": "Companies use multiple cloud providers (AWS, Azure, GCP) to avoid vendor lock-in and improve resilience and cost efficiency."
+  },
+  {
+    "topic": "Cloud Computing",
+    "title": "Cloud vs On-Premise",
+    "message": "Cloud computing offers scalability and lower upfront costs, while on-premise gives more control over data and compliance."
+  },
+  {
+    "topic": "Blockchain",
+    "title": "What is Blockchain?",
+    "message": "Blockchain is a distributed ledger where data is stored in linked, cryptographically secured blocks across many computers."
+  },
+  {
+    "topic": "Blockchain",
+    "title": "Smart Contracts",
+    "message": "Smart contracts are self-executing agreements coded on blockchain that automatically run when predefined conditions are met."
+  },
+  {
+    "topic": "Blockchain",
+    "title": "Web3 Explained",
+    "message": "Web3 envisions a decentralized internet where users own their data and digital assets, powered by blockchain technology."
+  },
+  {
+    "topic": "Space Tech",
+    "title": "Reusable Rockets",
+    "message": "SpaceX's Falcon 9 boosters can land and be relaunched, slashing the cost of putting satellites into orbit by 10x."
+  },
+  {
+    "topic": "Space Tech",
+    "title": "India's ISRO Success",
+    "message": "ISRO's Chandrayaan-3 became the first mission to soft-land near the Moon's south pole, a landmark for Indian space science."
+  },
+  {
+    "topic": "Space Tech",
+    "title": "Satellite Internet",
+    "message": "Low Earth Orbit satellite constellations like Starlink deliver high-speed internet to remote areas unreachable by fiber."
+  },
+  {
+    "topic": "Gaming",
+    "title": "Cloud Gaming",
+    "message": "Cloud gaming streams games from powerful remote servers to any device, eliminating the need for expensive gaming hardware."
+  },
+  {
+    "topic": "Gaming",
+    "title": "Ray Tracing",
+    "message": "Ray tracing simulates realistic light behavior in games — reflections, shadows, and global illumination — powered by modern GPUs."
+  },
+  {
+    "topic": "Gaming",
+    "title": "India's Gaming Market",
+    "message": "India has 500 million+ gamers and is the world's largest mobile gaming market by downloads, with huge monetization potential."
+  },
+  {
+    "topic": "Robotics",
+    "title": "Humanoid Robots",
+    "message": "Humanoid robots like Tesla's Optimus and Figure 01 are being trained to perform factory tasks alongside human workers."
+  },
+  {
+    "topic": "Robotics",
+    "title": "Drone Delivery",
+    "message": "Autonomous drones are being tested for last-mile delivery of medicines, packages, and food in urban and rural areas."
+  },
+  {
+    "topic": "Robotics",
+    "title": "Surgical Robots",
+    "message": "Robotic surgery systems like da Vinci allow surgeons to perform precise minimally invasive procedures with sub-millimeter accuracy."
+  },
+  {
+    "topic": "5G & Connectivity",
+    "title": "5G vs 4G",
+    "message": "5G offers up to 100x faster speeds and 10x lower latency than 4G, enabling real-time applications like remote surgery and AR."
+  },
+  {
+    "topic": "5G & Connectivity",
+    "title": "5G Rollout in India",
+    "message": "India completed its 5G rollout across major cities in record time, with Jio and Airtel leading coverage expansion."
+  },
+  {
+    "topic": "5G & Connectivity",
+    "title": "6G on the Horizon",
+    "message": "6G networks, expected around 2030, will deliver terabit speeds and near-zero latency, enabling fully immersive digital experiences."
+  },
+  {
+    "topic": "Semiconductors",
+    "title": "Chip Shortage Lessons",
+    "message": "The 2020-22 global chip shortage disrupted auto and electronics industries, revealing dangerous over-reliance on Taiwan's TSMC."
+  },
+  {
+    "topic": "Semiconductors",
+    "title": "India's Chip Ambition",
+    "message": "India is building its first semiconductor fabrication plants in Gujarat and Odisha to reduce dependence on imported chips."
+  },
+  {
+    "topic": "Semiconductors",
+    "title": "What is a GPU?",
+    "message": "GPUs were built for graphics but are now essential for AI training — they process thousands of operations simultaneously."
+  },
+  {
+    "topic": "Data Science",
+    "title": "What is Machine Learning?",
+    "message": "Machine learning lets computers learn from data and improve at tasks without being explicitly programmed for every scenario."
+  },
+  {
+    "topic": "Data Science",
+    "title": "Big Data Explained",
+    "message": "Big Data refers to datasets so large and fast-moving that traditional databases can't store or analyze them efficiently."
+  },
+  {
+    "topic": "Data Science",
+    "title": "Data Privacy",
+    "message": "India's Digital Personal Data Protection Act now governs how companies collect, store, and use citizen data."
+  },
+  {
+    "topic": "Social Media Tech",
+    "title": "Algorithm Explained",
+    "message": "Social media algorithms prioritize content using engagement signals — likes, shares, watch time — to maximize user retention."
+  },
+  {
+    "topic": "Social Media Tech",
+    "title": "Deepfake Danger",
+    "message": "AI-generated deepfakes can create convincing fake videos of real people, posing serious risks to misinformation and fraud."
+  },
+  {
+    "topic": "Latest Releases",
+    "title": "Nvidia RTX Spark",
+    "message": "Nvidia's RTX Spark superchip combines Grace CPU, Blackwell GPU, and 128GB unified memory for creators and developers."
+  },
+  {
+    "topic": "Latest Releases",
+    "title": "Gemini Spark by Google",
+    "message": "Google's Gemini Spark is a proactive AI agent that automates tasks across apps, rolling out to AI Ultra users in 2026."
+  },
+  {
+    "topic": "Latest Releases",
+    "title": "Apple AirPods Max 2",
+    "message": "Apple quietly launched the AirPods Max 2 with improved ANC, longer battery, and updated audio processing in 2026."
+  },
+  {
+    "topic": "Green Tech",
+    "title": "Solar Roof Tiles",
+    "message": "Solar tiles like Tesla Solar Roof replace regular roofing material while generating electricity, blending into homes aesthetically."
+  },
+  {
+    "topic": "Green Tech",
+    "title": "Carbon Capture Tech",
+    "message": "Direct Air Capture (DAC) machines pull CO₂ directly from the atmosphere and store it underground to fight climate change."
+  },
+  {
+    "topic": "Green Tech",
+    "title": "Green Hydrogen",
+    "message": "Green hydrogen is produced using renewable energy electrolysis and can replace fossil fuels in heavy industry and transport."
+  },
+  {
+    "topic": "Fintech",
+    "title": "UPI Global Expansion",
+    "message": "India's UPI payment system is expanding to countries like UAE, Singapore, and France, making it a global payment standard."
+  },
+  {
+    "topic": "Fintech",
+    "title": "Buy Now Pay Later",
+    "message": "BNPL services let consumers split purchases into installments — a massive trend in India's young, credit-card-light population."
+  },
+  {
+    "topic": "Fintech",
+    "title": "Central Bank Digital Currency",
+    "message": "India's Digital Rupee (e₹) is a CBDC issued by RBI that enables digital payments without a bank account, targeting rural users."
+  },
+  {
+    "topic": "EdTech",
+    "title": "AI Tutors",
+    "message": "AI tutors adapt lessons to each student's pace and weak areas, offering personalized education at scale and low cost."
+  },
+  {
+    "topic": "EdTech",
+    "title": "Gamified Learning",
+    "message": "Platforms like Duolingo use streaks, points, and rewards to make learning addictive and consistent through gamification."
+  },
+  {
+    "topic": "HealthTech",
+    "title": "Wearable Glucose Monitor",
+    "message": "Continuous glucose monitors (CGMs) track blood sugar without needle pricks, helping diabetics manage health in real time."
+  },
+  {
+    "topic": "HealthTech",
+    "title": "AI in Diagnostics",
+    "message": "AI models can detect cancer in medical scans with accuracy matching or exceeding specialist radiologists in some studies."
+  },
+  {
+    "topic": "Operating Systems",
+    "title": "Linux vs Windows",
+    "message": "Linux is open-source, highly customizable, and powers 96% of the world's servers, while Windows dominates consumer desktops."
+  },
+  {
+    "topic": "Operating Systems",
+    "title": "Android vs iOS",
+    "message": "Android holds ~72% global smartphone market share for its openness and affordability; iOS leads in premium experience and security."
   }
 ]
