@@ -38,8 +38,7 @@ with open(history_file, 'w') as f:
 bot_token = os.environ['TELEGRAM_BOT_TOKEN']
 chat_id = os.environ['TELEGRAM_CHAT_ID']
 
-message_text = f"💡 *Topic: {chosen['topic']}*\n\n🔥 *{chosen['title']}*\n{chosen['message']}\n\n- Evo AI"
-telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+message_text = f"💡 *Topic: {chosen['topic']}*\n\n🔥 *{chosen['title']}*\n{chosen['message']}\n\n🔗 track the topics from : https://tinyurl.com/evo-tracker-wc\n\n- Evo AI"telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
 
 payload = {
     "chat_id": chat_id,
