@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evo Watch Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: sans-serif; }
+        .card { border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .progress { height: 25px; border-radius: 12px; }
+        .badge-tech { background-color: #0d6efd; }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">🚀 Evo AI Watch Automation Tracker</h1>
+        <p class="text-muted">Track which tech topics have been sent to your boAt smartwatch.</p>
+    </div>
+
+    <div class="card p-4 mb-4">
+        <h3 class="h5 mb-3 fw-bold">Overall Progress</h3>
+        <div class="progress mb-3">
+            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 0%">0%</div>
+        </div>
+        <div class="d-flex justify-content-between text-muted small">
+            <span id="completionCount">Loading statistics...</span>
+            <span id="resetWarning" class="text-danger fw-bold d-none">🔄 All topics covered! Cycle will reset on next run.</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 h-100">
+                <h3 class="h5 mb-3 fw-bold text-success">✅ Covered Topics (<span id="coveredTitleCount">0</span>)</h3>
+                <ul id="coveredList" class="list-group list-group-flush">
+                    </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 h-100">
+                <h3 class="h5 mb-3 fw-bold text-primary">⏳ Remaining Queue (<span id="remainingTitleCount">0</span>)</h3>
+                <ul id="remainingList" class="list-group list-group-flush">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Files are relative to the website's root folder
+    const lessonsUrl = 'lessons.json';
+    const historyUrl = 'history.json';
+
+    async function loadTrackerData() {
+        try {
+            // 1. Fetch both data files simultaneously
+            const [lessonsResponse, historyResponse] = await Promise.all([
+                fetch(lessonsUrl),
+                fetch(historyUrl).catch(() => ({ json: () => [] })) // Handle case if history.json doesn't exist yet
+            ]);
+
+            const allLessons = await lessonsResponse.json();
+            
+            let coveredTitles = [];
+            try {
+                coveredTitles = await historyResponse.json();
+                if (!Array.isArray(coveredTitles)) coveredTitles = [];
+            } catch(e) {
+                coveredTitles = []; // Default to empty array if file missing/empty
+            }
+
+            // 2. Map structures for rendering
+            const totalCount = allLessons.length;
+            const coveredCount = coveredTitles.length;
+            const percentage = totalCount > 0 ? Math.round((coveredCount / totalCount) * 100) : 0;
+
+            // 3. Update Progress Dashboard
+            const pBar = document.getElementById('progressBar');
+            pBar.style.width = `${percentage}%`;
+            pBar.innerText = `${percentage}%`;
+            document.getElementById('completionCount').innerText = `${coveredCount} out of ${totalCount} topics finished`;
+
+            if (coveredCount === totalCount && totalCount > 0) {
+                document.getElementById('resetWarning').classList.remove('none');
+            }
+
+            // 4. Sort topics into covered vs remaining
+            const coveredListEl = document.getElementById('coveredList');
+            const remainingListEl = document.getElementById('remainingList');
+            
+            document.getElementById('coveredTitleCount').innerText = coveredCount;
+            document.getElementById('remainingTitleCount').innerText = totalCount - coveredCount;
+
+            allLessons.forEach(lesson => {
+                const isCovered = coveredTitles.includes(lesson.title);
+                
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item d-flex justify-content-between align-items-center px-0';
+                listItem.innerHTML = `
+                    <div>
+                        <strong>${lesson.title}</strong><br>
+                        <small class="text-muted">${lesson.message}</small>
+                    </div>
+                    <span class="badge badge-tech rounded-pill">${lesson.topic}</span>
+                `;
+
+                if (isCovered) {
+                    coveredListEl.appendChild(listItem);
+                } else {
+                    remainingListEl.appendChild(listItem);
+                }
+            });
+
+        } catch (error) {
+            console.error('Error rendering dashboard:', error);
+            document.getElementById('completionCount').innerText = 'Failed to load progress data template files.';
+        }
+    }
+
+    // Initialize display layout on page load
+    window.onload = loadTrackerData;
+</script>
+</body>
+</html>
